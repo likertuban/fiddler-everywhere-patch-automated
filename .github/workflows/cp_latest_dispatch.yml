@@ -327,9 +327,9 @@ jobs:
             if ($env:ARCH_CODE -eq "x86_64") {
               $downloadUrl = "https://downloads.getfiddler.com/mac/Fiddler%20Everywhere%20$scrapedVersion.dmg"
             } elseif ($env:ARCH_CODE -eq "arm64") {
-              $downloadUrl = "https://downloads.getfiddler.com/mac-arm64/Fiddler%20Everywhere%20$scrapedVersion.dmg"
+              $downloadUrl = "https://api.getfiddler.com/mac-arm64/latest-mac"
             } elseif ($env:ARCH_CODE -eq "arm64e") {
-              //Don't know
+              $downloadUrl = "https://api.getfiddler.com/mac-arm64/latest-mac"
             } else {
               throw "Unsupported OS architecture: $env:ARCH_CODE"
             }
